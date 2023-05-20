@@ -35,6 +35,9 @@ for (let i = 0; i < 9; i++) {
         newDiv = document.createElement("div");
         newDiv.innerText = sudoku[i][j];
         newDiv.style["padding"] = "8px 16px";
+        if (i == 0) {
+            newDiv.className = "green-square";
+        }
         newDiv.id = ids[i][j];
         if ((i + 1) % 3 == 0 && i != 8) {
             newDiv.style["border-bottom"] = "1px solid";
@@ -88,8 +91,8 @@ function solve() {
                                 ).innerHTML = k;
                                 document.getElementById(
                                     i.toString() + j.toString()
-                                ).style.backgroundColor = "#00FF00";
-                            }, ct * 10);
+                                ).className = "green-square";
+                            }, ct * 50);
                         }
                         ct++;
                         solve();
@@ -100,8 +103,8 @@ function solve() {
                                 ).innerHTML = 0;
                                 document.getElementById(
                                     i.toString() + j.toString()
-                                ).style.backgroundColor = "#FF0000";
-                            }, ct * 10);
+                                ).className = "red-square";
+                            }, ct * 50);
                         }
                         ct++;
                         // document.getElementById(
