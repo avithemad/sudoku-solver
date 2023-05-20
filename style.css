@@ -2,10 +2,40 @@ body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
 .red-square {
     background-color: red;
 }
 
 .green-square {
     background-color: greenyellow;
+}
+
+.sudoku-square {
+    min-height: 30px;
+    min-width: 15px;
+    border: 1px dotted
+}
+
+.sudoku-square:hover {
+    background-color: cadetblue;
+}
+
+.input-section {
+    padding-top: 8px;
+}
+
+.input-box {
+    background-color: aqua;
+    border: 1px solid;
+    padding: 8px 14px;
+    font-size: x-large;
+}
+
+.input-box:hover {
+    opacity: 50%;
+}
+
+.input-box:active {
+    opacity: 60%;
 }
